@@ -1,6 +1,6 @@
 #!/bin/bash
 
-storageDir="/eos/cms/store/group/dpg_ecal/comm_ecal/localreco/vbfhgg/HiggsCouplings/Trees_2024_01_03_allSTXSCats_NewVBF_VHhad"
+storageDir="/eos/cms/store/group/phys_higgs/cmshgg/emanuele/vbfhgg/HiggsCouplings/Trees_2024_03_08_lhcpCats"
 outDir=$1
 if [[ -z $outDir ]]; then
     echo "usage: $0 <outDir>"
@@ -23,5 +23,3 @@ fggRunJobs.py --load sig_jobs_2017_UL.json -d ${outDir}_${year2017Dir} -x cmsRun
 mkdir -p ${storageDir}/${outDir}_${year2018Dir}
 # samples in Era2018_legacy_v1_Summer20UL campaign
 fggRunJobs.py --load sig_jobs_2018_UL.json -d ${outDir}_${year2018Dir} -x cmsRun ../workspaceVbf.py metaDataSrc=flashgg dumpTrees=True doSystematics=True applyNNLOPSweight=True recalculatePDFWeights=True doPdfWeights=True useParentDataset=True anomalousCouplings=True dumpLHE=False melaEFT=True --nCondorCpu=5 pujidWP=tight maxEvents=-1 --stage-to=${storageDir}/${outDir}_${year2018Dir} -q workday -n 100 -H --no-copy-proxy --no-use-tarball --resubmit-missing --cont --max-resubmissions=10 &
-# samples in RunIISummer20UL18 campaign
-fggRunJobs.py --load sig2_jobs_2018_UL.json -d ${outDir}_${year2018Dir} -x cmsRun ../workspaceVbf.py metaDataSrc=flashgg dumpTrees=True doSystematics=True applyNNLOPSweight=True recalculatePDFWeights=True doPdfWeights=True useParentDataset=True anomalousCouplings=True dumpLHE=False melaEFT=True --nCondorCpu=5 pujidWP=tight maxEvents=-1 --stage-to=${storageDir}/${outDir}_${year2018Dir} -q workday -n 100 -H --no-copy-proxy &

@@ -10,6 +10,9 @@
 	"ggh_130"   : [
             "/GluGluHToGG_M130_TuneCP5_13TeV-amcatnloFXFX-pythia8"
         ],
+        "ggh_pow_125"   : [
+            "/GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8"
+        ],
 	"vbf_120"   : [
             "/VBFHToGG_M120_TuneCP5_13TeV-amcatnlo-pythia8"
         ],

@@ -10,6 +10,24 @@
 	"ggh_130"   : [
             "/GluGluHToGG_M130_TuneCP5_13TeV-amcatnloFXFX-pythia8"
         ],
+        "ggh_pow_120" : [
+            "/GluGluHToGG_M-120_TuneCP5_13TeV-powheg-pythia8"
+        ],
+        "ggh_pow_125" : [
+            "/GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8"
+        ],
+        "ggh_pow_130" : [
+            "/GluGluHToGG_M-130_TuneCP5_13TeV-powheg-pythia8"
+        ],
+        "ggh_ALT_CPoddminlo_125" : [
+            "/GluGluHToGGPlusTwoJets_CPodd_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8"
+        ],
+        "ggh_ALT_MMminlo_125" : [
+            "/GluGluHToGGPlusTwoJets_MM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8"
+        ],
+        "ggh_ALT_SMminlo_125" : [
+            "/GluGluHToGGPlusTwoJets_SM_M125_TuneCP5_13TeV-amcatnlopowheg-minlo-pythia8"
+        ],
 	"vbf_120"   : [
             "/VBFHToGG_M120_TuneCP5_13TeV-amcatnlo-pythia8"
         ],
@@ -94,6 +112,9 @@
             "/WminusH_HToGG_WToAll_M130_TuneCP5_13TeV-powheg-pythia8",
             "/WplusH_HToGG_WToAll_M130_TuneCP5_13TeV-powheg-pythia8"
         ],
+        "wh_ALT_L1_125" : [
+            "/WHiggs0L1ToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8",
+        ],
         "wh_ALT_L1f05_125" : [
             "/WHiggs0L1f05ph0ToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8"
         ],
@@ -102,6 +123,13 @@
         ],
         "wh_ALT_0PHf05_125" : [
             "/WHiggs0PHf05ph0ToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8"
+        ],
+
+        "wh_ALT_0M_125" : [
+            "/WHiggs0MToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8"
+        ],
+        "wh_ALT_0Mf05_125" : [
+            "/WHiggs0Mf05ph0ToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8"
         ],
         "wh_ALT_0PM_125" : [
             "/WHiggs0PMToGG_M125_TuneCP5_13TeV-JHUGenV7011-pythia8"
