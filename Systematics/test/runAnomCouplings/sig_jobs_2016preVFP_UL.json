@@ -14,10 +14,17 @@
                 "/GluGluHToGG_M-120_TuneCP5_13TeV-powheg-pythia8"
         ],
         "ggh_pow_125"   : [
+<<<<<<< HEAD
                 "/GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8"
         ],
         "ggh_pow_130"   : [
                 "/GluGluHToGG_M-130_TuneCP5_13TeV-powheg-pythia8"
+=======
+                "/GluGluHToGG_M-125_TuneCP5_13TeV-powheg-pythia8",
+        ],
+        "ggh_pow_130"   : [
+                "/GluGluHToGG_M-130_TuneCP5_13TeV-powheg-pythia8",
+>>>>>>> origin/dev_legacy_runII_MicroAODprod_AC
         ],
 	"vbf_120"   : [
             "/VBFHToGG_M120_TuneCP5_13TeV-amcatnlo-pythia8"
