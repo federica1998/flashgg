@@ -64,6 +64,14 @@ customize.options.register('ignoreNegR9',
                            VarParsing.VarParsing.varType.bool,
                            'ignoreNegR9')
 
+customize.options.register('disableJEC', 
+                           True,
+                           VarParsing.VarParsing.multiplicity.singleton,
+                           VarParsing.VarParsing.varType.bool,
+                           'disableJEC'
+                           )
+
+
 # set default options if needed
 customize.setDefault("maxEvents",-1)
 customize.setDefault("targetLumi",1.00e+3)
@@ -302,8 +310,8 @@ VBF_mva_probs = [
     "vbfMvaResult_prob_ggH := VBFMVA.vbfMvaResult_prob_ggH()",
     "vbfMvaResult_prob_VBF := VBFMVA.vbfMvaResult_prob_VBF()",
     "vbfDnnResult_prob_bkg := VBFMVA.vbfDnnResult_prob_bkg()",
-    "vbfDnnResult_prob_ggH := VBFMVA.vbfDnnResult_prob_ggH()",
-    "vbfDnnResult_prob_VBF := VBFMVA.vbfDnnResult_prob_VBF()",
+    "vbfDnnResult_prob_sm := VBFMVA.vbfDnnResult_prob_sm()",
+    "vbfDnnResult_prob_bsm := VBFMVA.vbfDnnResult_prob_bsm()",
 ]
 
 vh_mva_inputs = [
