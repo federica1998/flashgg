@@ -75,6 +75,7 @@ customize.options.register('disableJEC',
 # set default options if needed
 customize.setDefault("maxEvents",-1)
 customize.setDefault("targetLumi",1.00e+3)
+customize.setDefault("disableJEC",True)
 customize.parse()
 customize.metaConditions = MetaConditionsReader(customize.metaConditions)
 

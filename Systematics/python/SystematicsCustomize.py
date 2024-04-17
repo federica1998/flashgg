@@ -281,7 +281,7 @@ def customizeJetSystematicsForData(process):
   #  process.jec.toGet[0].tag = cms.string(process.jec.toGet[0].tag.value().replace("MC","DATA"))
   #  process.jec.connect = cms.string(process.jec.connect.value().replace("MC","DATA"))
     from flashgg.Taggers.flashggTags_cff import UnpackedJetCollectionVInputTag
-    jetsystprodlist = [getattr(process,"flashggJetSystematics%i"%i) for i in range(len(UnpackedJetCollectionVInputTag))]
+    jetsystprodlist = [] if customize.disableJEC==True else [getattr(process,"flashggJetSystematics%i"%i) for i in range(len(UnpackedJetCollectionVInputTag))]
     for systprod in jetsystprodlist:
         # For updating bugged or unavailable JEC
         # It should be a noop in cases where they are already correct
