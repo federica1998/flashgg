@@ -239,11 +239,8 @@ print '------------------------------------------------------------'
 print ' running on Zee         ::' , customize.runOnZee
 print '------------------------------------------------------------'
 
-signal_processes = ["ggh_", "vbf_", "wzh_", "wh_", "zh_", "bbh_", "thq_", "thw_",
-                    "tth_", "HHTo2B2G", "GluGluHToGG", "VBFHToGG", "VHToGG", "ttHToGG", "Acceptance"]
-
-is_signal = reduce(lambda y, z: y or z, map(
-    lambda x: customize.processId.count(x), signal_processes))
+signal_processes = ["ggh_","vbf_","wzh_","wh_","zh_","bbh_","thq_","thw_","tth_","ggzh_","HHTo2B2G","GluGluHToGG","VBFHToGG","VHToGG","ttHToGG","Acceptance","hh","vbfhh","qqh","ggh","tth","vh","VBFHiggs"]
+is_signal = reduce(lambda y,z: y or z, map(lambda x: customize.processId.count(x), signal_processes))
 
 # run on Drell-Yan
 if customize.runOnZee:
@@ -770,17 +767,18 @@ else:
 
 # Save the LHE information to make a-posteriori re-weighting
 process.lheInfosSeq = cms.Sequence()
-if customize.processId != "Data":
-    if is_signal: 
-        print '-------------------------------------------------------------'
-        print ' Running on signal, so adding the sequence to store LHE info '
-        customize.options.useParentDataset = True
-        process.load("PhysicsTools.NanoAOD.nano_cff")
-        process.lheInfosSeq += process.genParticleSequence
-        process.lheInfosSeq += process.particleLevelSequence
-        process.lheInfosSeq += process.lheInfoTable
-        process.vbfTagDumper.globalVariables.dumpLHEInfo = True 
-        print '-------------------------------------------------------------'
+process.vbfTagDumper.globalVariables.dumpMelaWeightsInfo = False
+process.vbfTagDumper.globalVariables.dumpLHEInfo = False
+if is_signal: 
+    print '-------------------------------------------------------------'
+    print ' Running on signal, so adding the sequence to store LHE info '
+    customize.options.useParentDataset = True
+    process.load("PhysicsTools.NanoAOD.nano_cff")
+    process.lheInfosSeq += process.genParticleSequence
+    process.lheInfosSeq += process.particleLevelSequence
+    process.lheInfosSeq += process.lheInfoTable
+    process.vbfTagDumper.globalVariables.dumpLHEInfo = True 
+    print '-------------------------------------------------------------'
 
     melaTables=True
     if melaTables:
