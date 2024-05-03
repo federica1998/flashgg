@@ -769,7 +769,7 @@ else:
 process.lheInfosSeq = cms.Sequence()
 process.vbfTagDumper.globalVariables.dumpMelaWeightsInfo = False
 process.vbfTagDumper.globalVariables.dumpLHEInfo = False
-if is_signal: 
+if False: #is_signal: 
     print '-------------------------------------------------------------'
     print ' Running on signal, so adding the sequence to store LHE info '
     customize.options.useParentDataset = True
