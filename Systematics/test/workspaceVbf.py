@@ -851,8 +851,8 @@ for mn in mns:
     elif hasattr(module,"DiPhotonTag"):
         print str(module),module.DiPhotonTag
 print
-if not customize.disableJEC:
-    printSystematicInfo(process)
+#if not customize.disableJEC:
+    #printSystematicInfo(process)
 
 ### Rerun microAOD sequence on top of microAODs using the parent dataset
 if customize.useParentDataset:
