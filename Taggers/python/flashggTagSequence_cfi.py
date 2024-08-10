@@ -17,9 +17,9 @@ def flashggPrepareTagSequence(process, options):
     setup_flashggDifferentialPhoIdInputsCorrection(process, options)
 
     if customize.disableJEC: # (Part of fastDebug) If true, we use flashggDifferentialPhoIdInputsCorrection instead of flashggPrefireDiPhotons 
-        flashggPreselectedDiPhotons.src = "flashggDifferentialPhoIdInputsCorrection"  
+        flashggPreselectedDiPhotons.src = "flashggPrefireDiPhotons"  
     else:
-        flashggPreselectedDiPhotons.src = "flashggPrefireDiPhotons" 
+        flashggPreselectedDiPhotons.src = "flashggDifferentialPhoIdInputsCorrection" 
 
     if "flashggDiPhotonMVA" in options:
         flashggDiPhotonMVA.diphotonMVAweightfile = cms.FileInPath(str(options["flashggDiPhotonMVA"]["weightFile"]))
